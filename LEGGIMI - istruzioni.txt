@@ -1,0 +1,144 @@
+SOCIOGRAMMA - ISTRUZIONI
+Analisi delle preferenze di collaborazione in un gruppo di lavoro
+
+
+COSA TI SERVE
+-------------
+Solo due file:
+
+  - sociogramma.py   (il programma)
+  - questo foglio di istruzioni
+
+piu' il tuo file Excel con le preferenze raccolte.
+
+
+LA PRIMA VOLTA
+--------------
+1. Salva sociogramma.py in una cartella a tua scelta (per esempio sul
+   Desktop, oppure in Documenti). Ricordati dov'e'.
+
+2. Fai doppio clic su sociogramma.py.
+
+   - Se si apre la finestra del programma: ottimo, salta al punto 4.
+   - Se Windows chiede con quale programma aprirlo, oppure non succede
+     nulla, vuol dire che manca Python: prosegui col punto 3.
+
+3. Installa Python:
+   - vai su   https://www.python.org/downloads/windows/
+   - scarica la versione consigliata (pulsante grande in cima) e avviala
+   - MOLTO IMPORTANTE: nella prima schermata metti la spunta su
+     "Add python.exe to PATH", poi clicca "Install Now"
+   - finita l'installazione, torna al punto 2.
+
+4. La prima volta il programma avvisa che deve scaricare alcuni componenti
+   e chiede conferma. Rispondi Si', aspetta qualche minuto senza chiudere
+   nulla (serve la connessione a internet). Se al termine compare
+   "Chiudi e riapri il programma", fai di nuovo doppio clic sul file.
+
+5. Quando la finestra e' aperta, clicca una volta sola su
+   "Crea l'avvio rapido": il programma mette sul Desktop un file
+   "Avvia sociogramma" che d'ora in poi apre tutto con un doppio clic.
+
+
+OGNI VOLTA CHE VUOI UN'ANALISI
+------------------------------
+1. Doppio clic su "Avvia sociogramma" (o di nuovo su sociogramma.py).
+
+2. Clicca "Sfoglia..." accanto a "File Excel" e scegli il file con le
+   preferenze.
+
+3. La cartella dei risultati viene proposta in automatico, accanto al tuo
+   file Excel. Puoi cambiarla con l'altro pulsante "Sfoglia...".
+
+4. Lascia le spunte come sono, oppure togli quello che non ti serve.
+
+5. Clicca "Genera il sociogramma" e aspetta qualche secondo.
+
+6. Alla fine compare un messaggio: clicca OK, poi
+   "Apri la cartella dei risultati".
+
+Se vuoi solo fare una prova senza dati veri, usa il pulsante
+"Crea un file Excel di esempio".
+
+
+COME DEVE ESSERE FATTO IL FILE EXCEL
+------------------------------------
+Una riga per ogni persona e queste otto colonne, con questi nomi nella
+prima riga:
+
+  ID        un codice breve che identifica la persona (es. P01, P02...)
+  COGNOME   il cognome
+  NOME      il nome
+  SI-1      ID della persona con cui vorrebbe lavorare (prima scelta)
+  SI-2      seconda scelta
+  SI-3      terza scelta
+  NO-1      ID della persona con cui NON vorrebbe lavorare (prima)
+  NO-2      seconda
+
+Nelle colonne SI e NO si scrive l'ID della persona indicata, non il nome.
+
+Le caselle possono restare vuote: chi ha indicato meno preferenze, o non ne
+ha indicata nessuna, viene gestito correttamente. Chi non ha compilato
+nulla compare nei diagrammi con il bordo tratteggiato.
+
+Maiuscole e minuscole non contano, e vanno bene anche scritture come
+"SI 1" o "si_1".
+
+
+COSA TROVI NELLA CARTELLA DEI RISULTATI
+---------------------------------------
+sociogramma_scelte.png
+    Il diagramma di chi vorrebbe lavorare con chi. Il cerchio e' tanto piu'
+    grande quante piu' preferenze la persona ha ricevuto; le frecce spesse
+    sono le preferenze reciproche; i colori indicano la posizione nel
+    gruppo.
+
+sociogramma_rifiuti.png
+    Lo stesso gruppo, nelle stesse posizioni, con le indicazioni negative.
+
+sociogramma.html
+    Versione da esplorare: doppio clic e si apre nel browser. Puoi spostare
+    le persone, ingrandire, cliccare su qualcuno per vedere solo le sue
+    relazioni, mostrare o nascondere preferenze e rifiuti.
+
+indici.xlsx
+    Tutti i numeri: indici per persona, indici di gruppo, coppie
+    reciproche, sottogruppi, chi ha compilato cosa, matrice completa,
+    eventuali anomalie.
+
+report.docx
+    Il documento da leggere e da consegnare: metodo, tabelle, i due
+    diagrammi, il commento ai risultati e le indicazioni per comporre
+    i team.
+
+
+SE QUALCOSA NON VA
+------------------
+Il doppio clic apre il Blocco note invece del programma
+    Windows ha associato i file .py all'editor di testo. Clic destro sul
+    file > "Apri con" > scegli Python. Se Python non compare nell'elenco,
+    installalo come al punto 3.
+
+"Colonne mancanti nel file"
+    I nomi delle colonne nella prima riga dell'Excel non corrispondono a
+    quelli elencati sopra. Correggili e riprova.
+
+Errore mentre salva, oppure "Permission denied"
+    Hai ancora aperto in Excel o in Word uno dei file dei risultati della
+    volta precedente. Chiudili e riprova.
+
+L'installazione dei componenti non riesce
+    Su alcuni computer aziendali l'installazione di programmi e' bloccata:
+    in quel caso serve una mano dall'assistenza informatica.
+
+Nel foglio "Anomalie" del file indici.xlsx trovi segnalati gli errori di
+compilazione: ID indicati che non esistono, persone che hanno indicato se
+stesse, nomi ripetuti. Il programma li scarta e prosegue.
+
+
+UNA RACCOMANDAZIONE
+-------------------
+I diagrammi e il report contengono nome e cognome delle persone insieme a
+informazioni delicate su chi e' scelto e chi e' rifiutato dai colleghi.
+Tienili riservati a chi conduce l'analisi. Se devono circolare piu' in
+generale, conviene produrne una versione con codici al posto dei nomi.

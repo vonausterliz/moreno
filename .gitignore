@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Output del programma (contiene dati personali)
+output_sociogramma/
+risultati/
+
+# File temporanei di Office e di sistema
+~$*
+.DS_Store
